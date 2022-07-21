@@ -24,6 +24,18 @@ body {
   "heroText heroImage"
   ;
 }
+#footerGridArea {
+  margin: 0px auto;
+  padding: 50px 35px;
+  display: grid;
+  min-height: 500px;
+  max-width: 1000px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas:
+  "contactForm teaCup"
+  ;
+}
 
 #heroText {
   margin: 0 auto;
@@ -92,16 +104,26 @@ body {
   grid-template-columns: 100%;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-        "heroText"
-        "heroImage";
+        "caseStudy1Text"
+        "caseStudy1Image";
   background-image: url("../images/bookcases@2x.png");
 }
 #caseStudy2 {
-  grid-area: caseStudy3;
+  grid-area: caseStudy2;
+  grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "caseStudy2Text"
+        "caseStudy2Image";
   background-image: url("../images/beds@2x.png");
 }
 #caseStudy3 {
-  grid-area: couches;
+  grid-area: caseStudy3;
+  grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "caseStudy3Text"
+        "caseStudy3Image";
   background-image: url("../images/couch@2x.png");
 }
 
