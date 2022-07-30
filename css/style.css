@@ -24,16 +24,16 @@ body {
   "heroText heroImage"
   ;
 }
-#footerGridArea {
+.footerGridArea {
   margin: 0px auto;
   padding: 50px 35px;
-  display: grid;
   min-height: 500px;
   max-width: 1000px;
+  display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   grid-template-areas:
-  "contactForm teaCup"
+    "contactForm teaCup"
   ;
 }
 
@@ -93,37 +93,34 @@ body {
   display: grid;
   grid-template-rows: 300px 300px 300px;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: 
+  grid-template-areas:
   "case study 1"
   "case study 2"
   "case study 3"
   ;
 }
-#caseStudy1 {
-  grid-area: casaeStudy1;
+#caseStudies, #skills {
+  max-width: 1000px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-areas: "caseStudy1 caseStudy2 caseStudy3"; */
+}
+.containerWithHeader {
+  display: grid;
   grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "caseStudy1Text"
-        "caseStudy1Image";
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+      "header"
+      "body";
+}
+#caseStudy1 {
   background-image: url("../images/bookcases@2x.png");
 }
 #caseStudy2 {
-  grid-area: caseStudy2;
-  grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "caseStudy2Text"
-        "caseStudy2Image";
   background-image: url("../images/beds@2x.png");
 }
 #caseStudy3 {
-  grid-area: caseStudy3;
-  grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "caseStudy3Text"
-        "caseStudy3Image";
   background-image: url("../images/couch@2x.png");
 }
 
@@ -172,6 +169,15 @@ body {
   width: 25%;
   font-weight: 500;
 }
+#navBar a {
+  font-size: 30px;
+  font-weight: normal;
+  text-decoration: none;
+}
+#navBar a.highlight {
+  font-weight: bold;
+  text-decoration: underline;
+}
 #navigation {
   display: flex;
   width: 50%;
@@ -182,6 +188,31 @@ body {
   cursor: pointer;
   text-decoration: none;
 }
+#footer {
+  max-width: 1000px;
+  margin: auto;
+}
+#footer form {
+  display: flex;
+  flex-direction: column;
+}
+#footer input, #footer textarea {
+  margin-bottom: 30px;
+}
+#footer input {
+  font-size: 18px;
+  padding: 5px 10px;
+}
+#footer textarea {
+  font-size: 18px;
+  padding: 5px 10px;
+  min-height: 100px;
+}
+#footer .icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 .icons {
   display: flex;
   justify-content: flex-end;
@@ -191,6 +222,9 @@ body {
 .icons img {
   margin: 15px;
   cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: gray;
 }
 .highlight {
   color: #5D786C;
@@ -201,8 +235,9 @@ body {
 
 h1 {
   font-size: 60px;
-  margin: 0px 0px;
+  margin: 0px auto;
   color: #5D768C;
+  max-width: 1000px;
 }
 
 h2 {
